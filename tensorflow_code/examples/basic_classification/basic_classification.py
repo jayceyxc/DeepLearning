@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: UTF-8 -*-
 # @Time    : 2018/11/13 19:35
 # @Author  : yuxuecheng
 # @Contact : yuxuecheng@xinluomed.com
