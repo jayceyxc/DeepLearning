@@ -116,6 +116,7 @@ plt.ylabel('Loss')
 plt.legend()
 
 plt.show()
+plt.savefig('Training_and_validation_loss.png')
 
 plt.clf()   # clear figure
 plt.plot(epochs, acc, 'bo', label='Training acc')
@@ -126,3 +127,4 @@ plt.ylabel('Accuracy')
 plt.legend()
 
 plt.show()
+plt.savefig('Training_and_validation_accuracy.png')
