@@ -95,7 +95,7 @@ bigger_history = bigger_model.fit(train_data,
 
 
 # Plot the training and validation loss
-def plot_history(histories, key='binary_crossentropy'):
+def plot_history(histories, filename, key='binary_crossentropy'):
     plt.figure(figsize=(16, 10))
 
     for name, history in histories:
@@ -110,12 +110,12 @@ def plot_history(histories, key='binary_crossentropy'):
 
     plt.xlim([0, max(history.epoch)])
     plt.show()
-    plt.savefig('overfitting.png')
+    plt.savefig(filename)
 
 
 plot_history([('baseline', baseline_history),
               ('smaller', smaller_history),
-              ('bigger', bigger_history)])
+              ('bigger', bigger_history)], 'baseline.png')
 
 # Add weight regularization
 l2_model = keras.models.Sequential([
@@ -136,7 +136,7 @@ l2_model_history = l2_model.fit(train_data,
                                 verbose=2)
 
 plot_history([('baseline', baseline_history),
-              ('l2', l2_model_history)])
+              ('l2', l2_model_history)], 'baseline_l2.png')
 
 # Add dropout
 dropout_model = keras.models.Sequential([
@@ -156,4 +156,4 @@ dropout_model_history = dropout_model.fit(train_data,
                                           validation_data=(test_data, test_labels),
                                           verbose=2)
 plot_history([('baseline', baseline_history),
-              ('dropout', dropout_model_history)])
+              ('dropout', dropout_model_history)], 'baseline_dropout.png')
