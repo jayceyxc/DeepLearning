@@ -4,6 +4,11 @@
 # @Author  : yuxuecheng
 # @Contact : yuxuecheng@xinluomed.com
 # @Site    : 
-# @File    : text_classification.py
+# @File    : basic_text_classification.py
 # @Software: PyCharm
-# @Description text_classification 
+# @Description basic_text_classification https://www.tensorflow.org/tutorials/keras/basic_text_classification
+
+
+
+
+

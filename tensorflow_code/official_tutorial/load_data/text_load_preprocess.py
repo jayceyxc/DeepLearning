@@ -237,7 +237,7 @@ test_data = test_data.padded_batch(BATCH_SIZE, padded_shapes=([-1], []))
 
 
 sample_text, sample_labels = next(iter(test_data))
-sample_text[0], sample_labels[0]
+print(sample_text[0], sample_labels[0])
 
 
 # In[32]:
